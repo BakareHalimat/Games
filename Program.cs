@@ -1,4 +1,7 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using System.Security.Cryptography;
+using System.Security.AccessControl;
+using System;
 
 namespace Games
 {
@@ -22,21 +25,21 @@ namespace Games
             {
                 Console.WriteLine("You have 6 trials");
                 Console.WriteLine("guess a number from 1 to 10 ");
-                Console.WriteLine("Hint: It is less than 8");
                 
                
                 for(int i = 0; i < 6; i++) 
                 {   
                     int input = 0;
-                    int answer = 6; 
+                    Random rd = new Random();
+                    int rand_num = rd.Next(1,10);
                     Console.Write("Enter a guess: ");
                     input = int.Parse(Console.ReadLine());
                     
-                    if (input != answer )
+                    if (input != rand_num )
                     {
                         Console.WriteLine("Try again");
                     }
-                    else if(input == answer)
+                    else if(input == rand_num)
                     {
                         Console.WriteLine("You Win");
                         break;
@@ -52,21 +55,21 @@ namespace Games
             {
                 Console.WriteLine("You have 4 trials");
                 Console.WriteLine("guess a number from 1 to 20 ");
-                Console.WriteLine("Hint: It is less than 17");
                 
                 
                 for(int i = 0; i < 4; i++) 
                 {   
                     int input = 0;
-                    int answer = 12; 
+                    Random rd = new Random();
+                    int rand_num = rd.Next(1,20);
                     Console.Write("Enter a guess: ");
                     input = int.Parse(Console.ReadLine());
                     
-                    if (input != answer )
+                    if (input != rand_num)
                     {
                         Console.WriteLine("Try again");
                     }
-                    else if(input == answer)
+                    else if(input == rand_num)
                     {
                         Console.WriteLine("You Win");
                         break;
@@ -81,20 +84,20 @@ namespace Games
             {
                 Console.WriteLine("You have 6 trials");
                 Console.WriteLine("guess a number from 1 to 50 ");
-                Console.WriteLine("Hint: It is less than 40");
                 
                 for(int i = 0; i < 6; i++) 
                 {   
                     int input = 0;
-                    int answer = 26; 
+                    Random rd = new Random();
+                    int rand_num = rd.Next(1,50);
                     Console.Write("Enter a guess: ");
                     input = int.Parse(Console.ReadLine());
                     
-                    if (input != answer )
+                    if (input != rand_num )
                     {
                         Console.WriteLine("Try again");
                     }
-                    else if(input == answer)
+                    else if(input == rand_num)
                     {
                         Console.WriteLine("You Win");
                         break;
